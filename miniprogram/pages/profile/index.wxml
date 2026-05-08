@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="card">
+    <view class="title">我的资料</view>
+    <view wx:if="{{user}}">
+      <view class="line">用户ID：{{user.id}}</view>
+      <view class="line">馋豆余额：{{user.beansBalance}}</view>
+      <view class="line">投稿次数：{{user.submissionCount}}</view>
+    </view>
+    <view wx:else class="sub">加载用户中...</view>
+  </view>
+
+  <view class="card redeem-card">
+    <view class="title">兑换中心</view>
+    <block wx:for="{{rewards}}" wx:key="id">
+      <view class="reward-row">
+        <view>
+          <view>{{item.name}}</view>
+          <view class="sub">{{item.beanCost}} 馋豆</view>
+        </view>
+        <button size="mini" data-id="{{item.id}}" bindtap="redeem">兑换</button>
+      </view>
+    </block>
+  </view>
+</view>

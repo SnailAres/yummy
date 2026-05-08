@@ -1,0 +1,36 @@
+<view class="container">
+  <view class="hero card">
+    <view class="title">宝藏零食库</view>
+    <view class="sub">用真实口碑，快速找到值得回购的零食。</view>
+    <view class="search-row">
+      <input
+        class="search-input"
+        placeholder="搜索零食名或品牌"
+        value="{{keyword}}"
+        bindinput="onKeywordInput"
+        confirm-type="search"
+        bindconfirm="goSearch"
+      />
+      <button class="search-btn" size="mini" bindtap="goSearch">搜索</button>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">情绪场景</view>
+    <scroll-view scroll-x class="chips-wrap">
+      <block wx:for="{{categories}}" wx:key="id">
+        <view class="chip" data-id="{{item.id}}" bindtap="quickCategoryTap">{{item.name}}</view>
+      </block>
+    </scroll-view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">猫选之物</view>
+    <empty-state wx:if="{{!loading && featured.length === 0}}" text="暂无推荐零食"></empty-state>
+    <block wx:for="{{featured}}" wx:key="id">
+      <snack-card snack="{{item}}" bind:cardtap="onCardTap"></snack-card>
+    </block>
+  </view>
+
+  <view wx:if="{{error}}" class="error">{{error}}</view>
+</view>

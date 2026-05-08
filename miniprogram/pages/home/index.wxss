@@ -1,0 +1,53 @@
+.hero {
+  background: radial-gradient(circle at top right, #fde68a, #fff7ed 62%);
+}
+
+.search-row {
+  margin-top: 16rpx;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  flex: 1;
+  padding: 16rpx;
+  border-radius: 12rpx;
+  background: #ffffff;
+  border: 1rpx solid #f3f4f6;
+}
+
+.search-btn {
+  margin-left: 12rpx;
+  background: #111827;
+  color: #ffffff;
+}
+
+.section {
+  margin-top: 24rpx;
+}
+
+.section-title {
+  font-size: 30rpx;
+  font-weight: 700;
+  margin-bottom: 12rpx;
+}
+
+.chips-wrap {
+  white-space: nowrap;
+}
+
+.chip {
+  display: inline-block;
+  margin-right: 10rpx;
+  padding: 10rpx 16rpx;
+  background: #fef3c7;
+  border-radius: 999rpx;
+  color: #92400e;
+  font-size: 24rpx;
+}
+
+.error {
+  margin-top: 12rpx;
+  color: #dc2626;
+  font-size: 24rpx;
+}

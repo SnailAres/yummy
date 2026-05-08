@@ -1,0 +1,42 @@
+.snack-card {
+  margin-bottom: 18rpx;
+  border-radius: 18rpx;
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 6rpx 18rpx rgba(17, 24, 39, 0.08);
+}
+
+.cover {
+  width: 100%;
+  height: 260rpx;
+  background: #f3f4f6;
+}
+
+.body {
+  padding: 16rpx;
+}
+
+.name {
+  font-size: 30rpx;
+  font-weight: 700;
+}
+
+.meta {
+  margin-top: 8rpx;
+  color: #6b7280;
+  font-size: 24rpx;
+}
+
+.tags {
+  margin-top: 10rpx;
+}
+
+.tag {
+  display: inline-block;
+  margin-right: 10rpx;
+  padding: 4rpx 10rpx;
+  background: #ffedd5;
+  color: #9a3412;
+  border-radius: 999rpx;
+  font-size: 20rpx;
+}

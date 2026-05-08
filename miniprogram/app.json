@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/discover/index",
+    "pages/publish/index",
+    "pages/profile/index",
+    "pages/search/index",
+    "pages/snack-detail/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "馋嘴猫",
+    "navigationBarBackgroundColor": "#fffaf3",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#fffaf3",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "selectedColor": "#d97706",
+    "color": "#4b5563",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/discover/index",
+        "text": "发现"
+      },
+      {
+        "pagePath": "pages/publish/index",
+        "text": "发布"
+      },
+      {
+        "pagePath": "pages/profile/index",
+        "text": "我的"
+      }
+    ]
+  },
+  "lazyCodeLoading": "requiredComponents"
+}

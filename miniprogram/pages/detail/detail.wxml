@@ -1,0 +1,32 @@
+<!-- miniprogram/pages/detail/detail.wxml -->
+<view class="container" wx:if="{{snack}}">
+  <!-- 返回按钮 -->
+  <view class="back-btn" bindtap="goBack">← 返回</view>
+
+  <image src="{{snack.imageUrl}}" mode="widthFix" class="big-img" />
+
+  <view class="content">
+    <text class="name">{{snack.name}}</text>
+    <text class="brand">品牌：{{snack.brand}}</text>
+
+    <view class="section">
+      <text>口味：</text>
+      <view class="tastes">
+        <text wx:for="{{tasteDisplay}}" wx:key="index">{{item}}</text>
+      </view>
+    </view>
+
+    <view class="section">
+      <text>推荐程度：{{snack.recLevel}} ({{recommendPercent}}%)</text>
+    </view>
+
+    <!-- 打分 -->
+    <view class="rating-section">
+      <text>你的评分（1～10）：</text>
+      <slider min="1" max="10" step="1" show-value value="{{userScore}}" bindchange="onScoreChange" />
+      <button type="primary" bindtap="submitRating">提交评分</button>
+    </view>
+  </view>
+</view>
+
+<view wx:else class="loading">加载中...</view>

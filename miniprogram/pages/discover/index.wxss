@@ -1,0 +1,38 @@
+.chips {
+  margin-top: 12rpx;
+}
+
+.chip {
+  display: inline-block;
+  margin: 0 12rpx 12rpx 0;
+  padding: 10rpx 14rpx;
+  border-radius: 12rpx;
+  background: #ecfccb;
+  color: #365314;
+  font-size: 24rpx;
+}
+
+.ranking-card {
+  margin-top: 20rpx;
+}
+
+.rank-row {
+  display: flex;
+  align-items: center;
+  padding: 14rpx 0;
+  border-bottom: 1rpx solid #f3f4f6;
+}
+
+.rank-index {
+  width: 80rpx;
+  color: #d97706;
+  font-weight: 700;
+}
+
+.rank-name {
+  flex: 1;
+}
+
+.rank-score {
+  color: #374151;
+}

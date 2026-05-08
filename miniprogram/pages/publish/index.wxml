@@ -1,0 +1,37 @@
+<view class="container">
+  <view class="card">
+    <view class="title">提交零食</view>
+    <view class="field">
+      <text class="label">零食名称</text>
+      <input class="input" value="{{name}}" bindinput="onInputName" placeholder="请输入零食名称" />
+    </view>
+    <view class="field">
+      <text class="label">品牌</text>
+      <input class="input" value="{{brand}}" bindinput="onInputBrand" placeholder="请输入品牌" />
+    </view>
+    <view class="field">
+      <text class="label">条形码</text>
+      <view class="row">
+        <input class="input flex-1" value="{{barcode}}" bindinput="onInputBarcode" placeholder="请输入或扫码条形码" />
+        <button size="mini" bindtap="scanBarcode">扫码</button>
+      </view>
+    </view>
+    <view class="field">
+      <text class="label">价格区间</text>
+      <view class="row">
+        <input class="input flex-1" type="digit" value="{{priceMin}}" bindinput="onInputPriceMin" placeholder="最低价" />
+        <text class="sep">-</text>
+        <input class="input flex-1" type="digit" value="{{priceMax}}" bindinput="onInputPriceMax" placeholder="最高价" />
+      </view>
+    </view>
+    <view class="field">
+      <text class="label">口感描述</text>
+      <textarea class="textarea" value="{{content}}" bindinput="onInputContent" placeholder="写下口感、场景或推荐理由"></textarea>
+    </view>
+    <view class="field">
+      <text class="label">图片</text>
+      <image-uploader bind:change="onImagesChange"></image-uploader>
+    </view>
+    <button class="btn-primary" loading="{{submitting}}" bindtap="submit">提交审核</button>
+  </view>
+</view>

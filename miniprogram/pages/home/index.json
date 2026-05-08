@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "馋嘴猫",
+  "usingComponents": {
+    "snack-card": "/components/snack-card/index",
+    "empty-state": "/components/empty-state/index"
+  }
+}

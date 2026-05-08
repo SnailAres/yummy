@@ -1,0 +1,12 @@
+<view class="snack-card" bindtap="onTap">
+  <image class="cover" src="{{snack.coverImage}}" mode="aspectFill"></image>
+  <view class="body">
+    <view class="name">{{snack.name}}</view>
+    <view class="meta">推荐指数 {{snack.recommendIndex}} · 券后 ¥{{snack.couponPrice}}</view>
+    <view class="tags">
+      <block wx:for="{{snack.tags}}" wx:key="*this">
+        <text class="tag">{{item}}</text>
+      </block>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,11 @@
+<view class="uploader">
+  <view class="grid">
+    <block wx:for="{{files}}" wx:key="path">
+      <view class="image-item">
+        <image src="{{item.path}}" mode="aspectFill" class="image"></image>
+        <text class="remove" bindtap="removeImage" data-index="{{index}}">x</text>
+      </view>
+    </block>
+    <view class="picker" bindtap="chooseImages">+</view>
+  </view>
+</view>

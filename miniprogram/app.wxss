@@ -1,0 +1,33 @@
+page {
+  background: linear-gradient(180deg, #fffaf3 0%, #ffffff 45%, #fff7ed 100%);
+  color: #111827;
+  font-family: "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+}
+
+.container {
+  padding: 24rpx;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 20rpx;
+  box-shadow: 0 8rpx 24rpx rgba(17, 24, 39, 0.06);
+  padding: 20rpx;
+}
+
+.title {
+  font-size: 34rpx;
+  font-weight: 700;
+}
+
+.sub {
+  color: #6b7280;
+  font-size: 24rpx;
+}
+
+.btn-primary {
+  background: #f59e0b;
+  color: #ffffff;
+  border-radius: 14rpx;
+  font-size: 28rpx;
+}

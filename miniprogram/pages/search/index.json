@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "搜索",
+  "usingComponents": {
+    "snack-card": "/components/snack-card/index",
+    "empty-state": "/components/empty-state/index"
+  }
+}

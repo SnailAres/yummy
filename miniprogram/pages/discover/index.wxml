@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="card">
+    <view class="title">按场景找零食</view>
+    <view class="sub">根据你当下状态，快速找到合适零食。</view>
+    <view class="chips">
+      <block wx:for="{{categories}}" wx:key="id">
+        <view class="chip" data-id="{{item.id}}" bindtap="openCategory">{{item.name}}</view>
+      </block>
+    </view>
+  </view>
+
+  <view class="card ranking-card">
+    <view class="title">无限回购榜</view>
+    <empty-state wx:if="{{ranking.length === 0}}" text="暂无榜单数据"></empty-state>
+    <block wx:for="{{ranking}}" wx:key="snackId">
+      <view class="rank-row" data-snack-id="{{item.snackId}}" bindtap="openSnack">
+        <text class="rank-index">#{{item.rank}}</text>
+        <text class="rank-name">{{item.snackName}}</text>
+        <text class="rank-score">{{item.recommendIndex}}</text>
+      </view>
+    </block>
+  </view>
+</view>

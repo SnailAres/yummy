@@ -1,0 +1,10 @@
+{
+  "name": "chanzuimao-mini-program",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test:api": "node --test cloudhosting/admin-api/test/api.test.js",
+    "test:functions": "node scripts/verify.mjs",
+    "test": "npm run test:api && npm run test:functions"
+  }
+}

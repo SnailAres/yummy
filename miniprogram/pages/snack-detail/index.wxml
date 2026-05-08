@@ -1,0 +1,37 @@
+<view class="container" wx:if="{{snack}}">
+  <view class="card">
+    <image class="cover" src="{{snack.coverImage}}" mode="aspectFill"></image>
+    <view class="title">{{snack.name}}</view>
+    <view class="sub">{{snack.brand}}</view>
+    <view class="score">推荐指数：{{snack.recommendIndex}}</view>
+    <view class="summary">{{snack.aiSummary}}</view>
+    <view class="reasons">
+      <block wx:for="{{snack.aiReasons}}" wx:key="*this">
+        <view class="reason">- {{item}}</view>
+      </block>
+    </view>
+    <view class="price-row">
+      <text class="price">券后价：¥{{snack.cpsInfo.couponPrice}}</text>
+      <text class="sub">原价：¥{{snack.cpsInfo.originPrice}}</text>
+    </view>
+    <view class="action-row">
+      <button size="mini" bindtap="toggleFavorite">{{isFavorite ? "取消收藏" : "收藏"}}</button>
+      <button class="btn-primary" size="mini" bindtap="buyNow">复制购买链接</button>
+    </view>
+  </view>
+
+  <view class="card review-card">
+    <view class="title">用户评价</view>
+    <empty-state wx:if="{{reviews.length === 0}}" text="暂无公开评价"></empty-state>
+    <block wx:for="{{reviews}}" wx:key="id">
+      <view class="review-item">
+        <view class="review-content">{{item.content}}</view>
+        <view class="sub">评分 {{item.rating}} · {{item.createdAt}}</view>
+      </view>
+    </block>
+  </view>
+</view>
+
+<view wx:else class="container">
+  <empty-state text="加载中或内容不存在"></empty-state>
+</view>

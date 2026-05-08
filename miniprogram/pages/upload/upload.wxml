@@ -1,0 +1,37 @@
+<view class="container">
+  <form bindsubmit="onSubmit">
+    <view class="field">
+      <text>零食名称 *</text>
+      <input name="name" placeholder="如：乐事黄瓜味薯片" />
+    </view>
+    <view class="field">
+      <text>品牌 *</text>
+      <input name="brand" placeholder="如：乐事" />
+    </view>
+
+    <view class="field">
+      <text>口味评价（请根据实际体验打星）*</text>
+      <view wx:for="{{tasteTypes}}" wx:key="key" class="taste-row">
+        <text>{{item.label}}</text>
+        <radio-group name="taste_{{item.key}}">
+          <label wx:for="{{[1,2,3,4,5]}}" wx:key="index" style="margin-right: 20rpx;">
+            <radio value="{{index}}" checked="{{formTastes[item.key] == index}}" />
+            <text>{{index}}⭐</text>
+          </label>
+        </radio-group>
+      </view>
+    </view>
+
+    <view class="upload-area" bindtap="chooseImage">
+      <text wx:if="{{!imageUrl}}">+ 点击上传零食图片 *</text>
+      <image wx:else src="{{imageUrl}}" mode="aspectFit" />
+    </view>
+
+    <view class="field">
+      <text>初始评分（1～10）*</text>
+      <slider min="1" max="10" step="1" show-value value="{{initialScore}}" bindchange="onScoreChange" />
+    </view>
+
+    <button form-type="submit" type="primary" class="submit-btn">提交审核</button>
+  </form>
+</view>

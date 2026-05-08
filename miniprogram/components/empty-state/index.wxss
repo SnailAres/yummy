@@ -1,0 +1,9 @@
+.empty-wrap {
+  text-align: center;
+  padding: 48rpx 0;
+}
+
+.empty-text {
+  color: #9ca3af;
+  font-size: 24rpx;
+}

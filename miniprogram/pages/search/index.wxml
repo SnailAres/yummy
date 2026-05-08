@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="card">
+    <input
+      class="search-input"
+      placeholder="搜索零食名或品牌"
+      value="{{keyword}}"
+      bindinput="onKeywordInput"
+      bindconfirm="onConfirmSearch"
+      confirm-type="search"
+    />
+    <view class="sort-row">
+      <text class="sort-item {{sort === 'recommend' ? 'active' : ''}}" data-sort="recommend" bindtap="onSortChange">推荐优先</text>
+      <text class="sort-item {{sort === 'hot' ? 'active' : ''}}" data-sort="hot" bindtap="onSortChange">热度优先</text>
+      <text class="sort-item {{sort === 'latest' ? 'active' : ''}}" data-sort="latest" bindtap="onSortChange">最新收录</text>
+      <text class="sort-item {{sort === 'low_price' ? 'active' : ''}}" data-sort="low_price" bindtap="onSortChange">低价优先</text>
+    </view>
+  </view>
+
+  <view class="sub total">共 {{total}} 条结果</view>
+  <empty-state wx:if="{{!loading && list.length === 0}}" text="暂无搜索结果"></empty-state>
+  <block wx:for="{{list}}" wx:key="id">
+    <snack-card snack="{{item}}" bind:cardtap="onCardTap"></snack-card>
+  </block>
+</view>

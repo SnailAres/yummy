@@ -1,0 +1,18 @@
+<!-- miniprogram/pages/my/my.wxml -->
+<view class="container">
+  <view class="section-title">我上传的零食</view>
+  <view wx:if="{{myUploaded.length === 0}}" class="empty">暂无上传记录</view>
+  <view wx:else>
+    <view wx:for="{{myUploaded}}" wx:key="_id" class="snack-row" bindtap="goDetail" data-id="{{item._id}}">
+      {{item.name}} - {{item.brand}}
+    </view>
+  </view>
+
+  <view class="section-title">我评分的零食</view>
+  <view wx:if="{{myRated.length === 0}}" class="empty">暂无评分记录</view>
+  <view wx:else>
+    <view wx:for="{{myRated}}" wx:key="_id" class="snack-row" bindtap="goDetail" data-id="{{item.snackId}}">
+      {{item.snackName}} - 评分：{{item.score}}
+    </view>
+  </view>
+</view>
